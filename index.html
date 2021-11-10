@@ -1,11 +1,55 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1>Vamos a isso sdd oi</h1>
-        <input type=´number´ placeholder="Celsius">
-        <h2>Isso é igual a <span class="result"> </span></h2>
-        <script src="index.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Joguinho do Dado</title>
+    <link href="index.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <main>
+      <div class="modal ">
+        <button class="xis">&times;</button>
+        <h1 class="ajuda centro" id="boas-vindas">Boas vindas ao Joguinho do Dado!</h1>
+        <h2 class="ajuda">Regras do Jogo</h2>
+        <ul>
+          <li class="ajuda">O jogo tem dois jogadores, e começa com o Jogador Um.</li>
+          <li class="ajuda">O objetivo do jogo é ser o primeiro jogador a alcançar 100 pontos totais</li>
+          <li class="ajuda">Na sua vez, um jogador <strong>Rola</strong> o dado quantas vezes desejar. O número tirado no dado será somado à <em>pontuação atual</em> do jogador. Quando estiver satisfeito, o jogador pode <strong>Segurar</strong> a pontuação atual para adicioná-la ao seu total e passar a vez ao seu oponente.</li>
+          <li class="ajuda">No entanto, caso o jogador <em>tire um 1</em> no dado, este perderá toda a sua pontuação atual, e passará a vez.</li>
+        </ul>
+        <h3 class="centro">Boa sorte!</h3>
+      </div>
+      
+      <section class="jogador jogador-0 jogador-ativo">
+        <h2 class="nome" id="nome-0">Jogador 1</h2>
+        <p class="pontos" id="pontos-0">12</p>
+        <p class="mensagem escondido" id="mensagem-0">Você venceu!!!</p>
+        <div class="atual">
+          <p class="atual-r">Atual</p>
+          <p class="atual-p" id="atual-0">0</p>
+        </div>
+      </section>
+      
+      <section class="jogador jogador-1">
+        <h2 class="nome" id="nome-1">Jogador 2</h2>
+        <p class="pontos" id="pontos-1">24</p>
+        <p class="mensagem escondido" id="mensagem-1">Você venceu!!!</p>
+        <div class="atual">
+          <p class="atual-r">Atual</p>
+          <p class="atual-p" id="atual-1">0</p>
+        </div>
+      </section>
+      
+      <img src="d6-5.png" alt="Dado do jogo" class="dado" />
+      <button class="botao botao-novo">🔄 Novo Jogo</button>
+      <button class="botao botao-rolar">🎲 Rolar dado</button>
+      <button class="botao botao-segurar">📥 Segurar</button>
+      
+      <div class="tela "></div>
+    </main>
+    
+  <script src="index.js"></script>
+  </body>
+  
 </html>
