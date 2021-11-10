@@ -42,7 +42,7 @@ const rolar = function () {
         
         //Mostrando o dado
         dadoEl.classList.remove("escondido")
-        dadoEl.src = `d6-${dado}.png`
+        dadoEl.src = `dado6/d6-${dado}.png`
         
         //Comparando e quantificando os resultados
         if (dado != 1) {
